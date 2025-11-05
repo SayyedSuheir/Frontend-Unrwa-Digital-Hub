@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCloud</title>
+    <link rel="stylesheet" href="homepagecss.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   
+
+</head>
+<body>
+  
+     <nav id="desktop" >
+           <div id="head-svg">
+                <img src="assets\imgs\logo.png" >
+             </div>      
+
+            <div class="btns">
+                <button id="btn-login" onclick="login()">login </button>
+                <button id="btn-signup" onclick="SignUp()"> Sign Up </button>
+            </div> 
+      
+    </nav>
+    <header>
+       
+        <nav class="navbar bg-body-tertiary fixed-top" id="phone-nav">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets\imgs\logo.png" >
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                                <img src="assets\imgs\logo.png" >
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Signup</a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="#">Login</a>
+                                </li>
+                                
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+        </nav>
+
+      <div class="modal" id="login-modal"  tabindex="-1">
+        <form action="#" method="post">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="CloseWindow()" ></button>
+                </div>
+                <div class="modal-body">
+                  <div id="lblemail-inputemail">
+                        <div class="lbl-input">
+                            <label class="lbl-input">Email address </label>
+                        </div>
+                        <div id="email">
+                            <input type="email" placeholder="Please enter your  email" id="loginemail">
+                        </div>
+                    </div>
+                     <div id="lblpw-inputpw">
+                        <div class="lbl-input">
+                            <label >Password</label>
+                        </div>
+                        <div id="password">
+                            <input type="password" placeholder="Enter your password" id="loginpassword">
+                        </div>
+                    </div>
+                    <div id="btnloginform">
+                        <button type="button" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+               
+                </div>
+            </div>
+        </form>
+      </div>  
+      <div class="modal" id="signup-modal"  tabindex="-1">
+        <form action="#" method="post" onsubmit="return CheckValidation(event)">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="CloseWindow()" ></button>
+                </div>
+                <div class="modal-body">
+                    <div id="lblfn-inputfn">
+                        <div class="lblfn-input">
+                            <label class="lblfn-input" >Full Name </label>
+                        </div>
+                        <div id="signupfn">
+                            <input type="text" id="fn">
+                        </div>
+                        <div id="fnerrormsg">
+
+                        </div>
+                    </div>
+                    <div id="lblemail-inputemail">
+                        <div class="lbl-input">
+                            <label class="lbl-input">Email address </label>
+                        </div>
+                        <div id="email">
+                            <input type="email" id="txtemail" >
+                        </div>
+                        <div id="emailerrormsg">
+
+                        </div>
+                    </div>
+                    <div id="lblphone-inputphone">
+                        <div class="lbl-phone">
+                            <label class="lbl-input">Phone </label>
+                        </div>
+                        <div id="signupphone">
+                            <input type="number" id="phone">
+                        </div>
+                        <div id="phoneerrormsg">
+
+                        </div>
+                    </div>
+                     <div id="lblpw-inputpw">
+                        <div class="lbl-input">
+                            <label >Password</label>
+                        </div>
+                        <div id="password">
+                            <input type="password"  id="pw">
+                        </div>
+                        <div id="pwerrormsg">
+
+                        </div>
+                    </div>
+                      <div id="lblcpw-inputcpw">
+                        <div class="lbl-input">
+                            <label >Confirm Password</label>
+                        </div>
+                        <div id="cpassword">
+                            <input type="password" id="confirmpassword" >
+                        </div>
+                        <div id="cpwerrormsg">
+                            
+                        </div>
+                    </div>
+                    <div id="error">
+
+                    </div>
+                    <div id="btnsignupform">
+                        <button type="submit" class="btn btn-primary"  >Sign Up</button>
+                    </div>
+                </div>
+               
+                </div>
+            </div>
+        </form>
+      </div> 
+    </header> 
+    <main>
+        <div class="middle-top">
+            <div id="intro-p">
+                <p>
+                 <span id="intro-p-header">  
+                     Coded to by the experts;
+                 </span>
+                        Will exceed your expectations;
+                        Loaded with ultimate cloud features;
+                        Higher than the clouds; 
+                        We keep our standards high .
+                </p>
+            </div>
+            <div id="middle-top-img">    
+                <img src="assets\imgs\image.png"> 
+            </div>    
+        </div>
+        <div class="middle-last">
+            <div id="services">
+                 <h3> Service </h3>
+            </div>  
+            <div id="cardslist">   
+                <div class="Cards">
+                    
+                    <div class="card" >
+                        <img src="assets\imgs\imagecard1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Services</h5>
+                            <p class="card-text">
+                                Web development slogans capture the essence of creating online wonders.
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets\imgs\imagecard2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Marketing Services</h5>
+                            <p class="card-text">
+                                Web development slogans capture the essence of creating online wonders.
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets\imgs\imageCard3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Services</h5>
+                            <p class="card-text">
+                                Web development slogans capture the essence of creating online wonders.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="seemore">
+                <button type="button" id="LoadMore" onclick="AddItems()"> Load More </button>
+            </div>
+        </div>
+        <div id="darklightmode">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <div class="slider slider--0">ON</div>
+                <div class="slider slider--1">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="slider slider--2"></div>
+                <div class="slider slider--3">OFF</div>
+            </label>   
+        </div>
+       
+        
+    </main>
+    <footer>
+        <div class="footer-items">
+            <div id="socialmedia">
+                        <div class="footer-svg">
+                        <span id="logo" style="background-color: rgb(180, 162, 242);">
+                             <img src="assets\imgs\logo.png" >
+                        </span>
+                        <span id="socialmedia-icons" >
+                            <svg width="126" height="24" viewBox="0 0 126 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z" fill="white"/>
+                                <path d="M66.028 2.00099C66.7577 1.99819 67.4875 2.00552 68.217 2.02299L68.411 2.02999C68.635 2.03799 68.856 2.04799 69.123 2.05999C70.187 2.10999 70.913 2.27799 71.55 2.52499C72.21 2.77899 72.766 3.12299 73.322 3.67899C73.8304 4.17859 74.2238 4.78293 74.475 5.44999C74.722 6.08699 74.89 6.81399 74.94 7.87799C74.952 8.14399 74.962 8.36599 74.97 8.58999L74.976 8.78399C74.9938 9.51318 75.0014 10.2426 74.999 10.972L75 11.718V13.028C75.0025 13.7577 74.9948 14.4875 74.977 15.217L74.971 15.411C74.963 15.635 74.953 15.856 74.941 16.123C74.891 17.187 74.721 17.913 74.475 18.55C74.2246 19.2177 73.8311 19.8226 73.322 20.322C72.822 20.8303 72.2173 21.2237 71.55 21.475C70.913 21.722 70.187 21.89 69.123 21.94C68.856 21.952 68.635 21.962 68.411 21.97L68.217 21.976C67.4875 21.9938 66.7577 22.0014 66.028 21.999L65.282 22H63.973C63.2433 22.0025 62.5135 21.9948 61.784 21.977L61.59 21.971C61.3526 21.9624 61.1153 21.9524 60.878 21.941C59.814 21.891 59.088 21.721 58.45 21.475C57.7827 21.2243 57.1782 20.8308 56.679 20.322C56.17 19.8223 55.7762 19.2175 55.525 18.55C55.278 17.913 55.11 17.187 55.06 16.123C55.0489 15.8857 55.0389 15.6484 55.03 15.411L55.025 15.217C55.0066 14.4875 54.9982 13.7577 55 13.028V10.972C54.9972 10.2426 55.0045 9.51318 55.022 8.78399L55.029 8.58999C55.037 8.36599 55.047 8.14399 55.059 7.87799C55.109 6.81299 55.277 6.08799 55.524 5.44999C55.7754 4.78261 56.17 4.17843 56.68 3.67999C57.1789 3.17074 57.783 2.77656 58.45 2.52499C59.088 2.27799 59.813 2.10999 60.878 2.05999L61.59 2.02999L61.784 2.02499C62.5132 2.00656 63.2426 1.99823 63.972 1.99999L66.028 2.00099ZM65 7.00099C64.3375 6.99162 63.6798 7.11401 63.065 7.36105C62.4502 7.6081 61.8906 7.97486 61.4188 8.44004C60.947 8.90522 60.5724 9.45952 60.3167 10.0707C60.061 10.682 59.9293 11.3379 59.9293 12.0005C59.9293 12.663 60.061 13.319 60.3167 13.9302C60.5724 14.5414 60.947 15.0958 61.4188 15.5609C61.8906 16.0261 62.4502 16.3929 63.065 16.6399C63.6798 16.887 64.3375 17.0094 65 17C66.3261 17 67.5979 16.4732 68.5355 15.5355C69.4732 14.5978 70 13.3261 70 12C70 10.6739 69.4732 9.40213 68.5355 8.46445C67.5979 7.52677 66.3261 7.00099 65 7.00099ZM65 9.00099C65.3985 8.99364 65.7945 9.06578 66.1648 9.21319C66.5351 9.3606 66.8723 9.58033 67.1568 9.85953C67.4412 10.1387 67.6672 10.4718 67.8214 10.8393C67.9757 11.2068 68.0552 11.6014 68.0553 12C68.0553 12.3986 67.976 12.7931 67.8218 13.1607C67.6677 13.5283 67.4418 13.8614 67.1575 14.1407C66.8731 14.42 66.536 14.6399 66.1657 14.7874C65.7955 14.9349 65.3995 15.0072 65.001 15C64.2054 15 63.4423 14.6839 62.8797 14.1213C62.3171 13.5587 62.001 12.7956 62.001 12C62.001 11.2043 62.3171 10.4413 62.8797 9.87867C63.4423 9.31606 64.2054 8.99999 65.001 8.99999L65 9.00099ZM70.25 5.50099C69.9274 5.5139 69.6223 5.65114 69.3986 5.88396C69.1749 6.11678 69.05 6.42712 69.05 6.74999C69.05 7.07285 69.1749 7.38319 69.3986 7.61601C69.6223 7.84884 69.9274 7.98607 70.25 7.99899C70.5815 7.99899 70.8995 7.86729 71.1339 7.63287C71.3683 7.39845 71.5 7.08051 71.5 6.74899C71.5 6.41747 71.3683 6.09952 71.1339 5.8651C70.8995 5.63068 70.5815 5.49899 70.25 5.49899V5.50099Z" fill="white"/>
+                                <g clip-path="url(#clip0_7_59)">
+                                <path d="M125.286 11.9999C125.286 14.4627 124.307 16.8245 122.566 18.5659C120.825 20.3074 118.463 21.2857 116 21.2857C113.537 21.2857 111.175 20.3074 109.434 18.5659C107.693 16.8245 106.714 14.4627 106.714 11.9999M125.286 11.9999C125.286 9.53722 124.307 7.17537 122.566 5.43396C120.825 3.69255 118.463 2.71423 116 2.71423C113.537 2.71423 111.175 3.69255 109.434 5.43396C107.693 7.17537 106.714 9.53722 106.714 11.9999M125.286 11.9999H106.714" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M119.571 11.9999C119.396 15.3956 118.145 18.6476 116 21.2857C113.855 18.6476 112.604 15.3956 112.429 11.9999C112.604 8.60425 113.855 5.35231 116 2.71423C118.145 5.35231 119.396 8.60425 119.571 11.9999Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_7_59">
+                                <rect width="20" height="20" fill="white" transform="translate(106 2)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        </div>
+                        <p id="location">House 12313 Street 34 New York, US</p>
+
+
+            </div>
+            <div class="sub-footer">
+                    <div id="support">
+                    <ul>
+                        <li id="support-head">Support </li>
+                        <a href="#"><li>Contact Us</li></a>
+                        <a href="#"><li>FAQ</li></a>
+                        <a href="#"><li>Downloads</li></a>
+                        <a href="#"><li>Product Registration </li></a>
+                    </ul>
+                    </div>
+                    <div id="aboutUS">
+                        <ul>
+                            <li id="aboutUS-head">SmartCloud</li>
+                            <a href="#"><li>About SmartCloud</li></a>
+                            <a href="#"><li>SmartCloud Design</li></a>
+                            <a href="#"><li>Newsroom</li></a>
+                            <a href="#"><li>Career </li></a>
+                        </ul>
+                    </div>
+                    <div id="chatus">
+                        <button id="btn-chatus"> Chat Us</button>
+                    </div>
+            </div>    
+        </div>
+        
+
+    </footer>
+ 
+    <script src="home.js"></script>
+</body>
+</html>

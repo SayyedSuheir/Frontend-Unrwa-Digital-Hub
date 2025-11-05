@@ -1,0 +1,857 @@
+:root{
+    --btnBackground: linear-gradient(180deg, rgba(216, 132, 7, 0.9) 0%, #FF9900 113.54%);
+    --btnFont: 'Barlow';
+}
+#phone-nav{
+    display: none;
+}
+
+body {
+    width:100%;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+   
+    
+    
+
+}
+body.darkmode .postblog {
+  background-color: #222 !important;
+  color: white;
+}
+body.darkmode .middle-last{
+  background-color: #222 !important;
+  color: white;
+}
+
+
+
+body.darkmode footer {
+  background-color: #111;
+}
+body.darkmode #logo {
+  background-color: #111 !important;
+}
+header{
+    
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+   
+    
+}
+#desktop{
+    width: 100%;
+    position: sticky;
+    top:0;
+    z-index: 999;
+}
+nav{
+    display: flex;
+    
+    width:100%;
+    
+    padding-left: 5%;
+    justify-content: space-between;
+    
+   
+}
+#head-svg {
+ 
+width: 50%;
+
+}
+
+.btns{
+    width:50%;
+    display: flex;
+    gap:2%;
+}
+
+#btn-login {
+  
+/* Login */
+
+
+width: 30%;
+height: auto;
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 1em;
+line-height: 1.1em;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+
+color: #000000;
+
+}
+
+#btn-signup{
+   
+/* Rectangle 3 */
+
+
+width: 30%;
+height: auto;
+
+
+background: linear-gradient(180deg, rgba(216, 132, 7, 0.9) 0%, #FF9900 113.54%);
+border-radius: 0.2em;
+
+
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 1em;
+line-height: 1.1em;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+
+color: #000000;
+
+
+
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+    width:100%;
+ 
+}
+.middle-top{
+    
+    
+    display: flex;
+
+ 
+    width:100%;
+    
+    justify-content: space-between;
+    gap:2em;
+    padding-left: 5%;
+}
+#intro-p{
+   
+    
+    /* Coded to by the experts; Will exceed your expectations; Loaded with ultimate cloud features; Higher than the clouds; We keep our standards high . */
+
+    
+    width: 40%;
+    height: auto;
+    
+    display: flex;
+     align-items: center;
+    letter-spacing: 0.205em;
+    text-transform: uppercase;
+
+    color: #213BB0;
+
+    font-family: 'Barlow';
+    font-style: normal;
+
+
+
+}
+#intro-p-header{
+   
+    font-weight: 800;
+    font-size: 2em;
+    line-height: 1.5em;
+    
+    align-items: center;
+    letter-spacing: 0.205em;
+    
+}
+#middle-top-img{
+    
+    
+    /* 2002.i039 1 */
+
+    
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+   
+
+}
+#middle-top-img img{
+    width:40%;
+    
+}
+.middle-last{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+
+    
+  
+    /* Rectangle 4 */
+width: 100%;
+
+
+
+background: #213BB0;
+border-radius: 56px 56px 0px 0px;
+
+
+
+
+}
+
+.middle-last h3{
+   /* Services */
+
+
+width: 166px;
+height: 48px;
+left: 534px;
+top: 778px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 48px;
+
+color: #ffffff;
+
+
+
+
+}    
+#cardslist{
+    display: flex;
+    flex-direction: column;
+}
+.Cards{
+  display: flex; 
+  justify-content: center;
+  gap:2%;
+  
+    /* Boxes */
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+.card{
+
+    height:300px  !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card img{
+
+    /* 6909 1 */
+
+width: 100%;
+height: 40%;
+
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.card-title{
+    /* Web Services */
+
+width: 100%;
+
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 800;
+font-size: 22px;
+/* line-height: 26px; */
+display: flex;
+align-items: center;
+letter-spacing: 0.205em;
+text-transform: capitalize;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+
+}
+
+.card-text{
+    /* Web development slogans capture the essence of creating online wonders. */
+
+width: 286px;
+height: 82px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+/* line-height: 22px; */
+display: flex;
+align-items: center;
+/* letter-spacing: 0.205em; */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+}
+
+footer{
+
+    
+width: 100%;
+background: #213BB0;
+
+display: flex;
+justify-content: center;
+
+
+}
+
+.footer-items{
+    /* padding-top: 5%; */
+    margin-left:2% ;
+    display: flex;
+    width:100%;
+    
+
+}
+
+.footer-svg{
+    display: flex;
+    flex-direction: column;
+    gap:5%;
+ 
+    
+
+}
+#logo svg{
+
+
+font-family: 'Inter';
+font-style: italic;
+font-weight: 800;
+font-size: 25px;
+line-height: 30px;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+
+}
+
+#socialmedia{
+    display: flex;
+    flex-direction: column;
+    gap:10%;
+    width: 30%;
+    align-items: center;
+}
+#location{
+    /* House 12313 Street 34 New York, US */
+
+
+width: 280px;
+height: 60px;
+left: 84px;
+top: 1702px;
+
+font-family: 'Inter';
+font-style: italic;
+font-weight: 800;
+font-size: 25px;
+line-height: 30px;
+
+color: #FFFFFF;
+
+
+}
+.sub-footer{
+    width:70%;
+    display:flex ;
+    justify-content: center;
+    gap:5%;
+}
+#support{
+    /* Support */
+
+ display: flex;
+ flex-direction: column;
+ width: 25%;
+
+
+}
+#support ul{
+    list-style: none;
+    
+
+
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    
+
+    color: #FFFFFF;
+
+
+}
+#support ul li{
+    padding: 5%;
+}
+#support a{
+    text-decoration: none;
+    color:#FFFFFF;
+}
+#support-head{
+    /* Support */
+
+
+width: 280px;
+height: 24px;
+left: 452px;
+top: 1588px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+color: #8B8A8A;
+
+
+}
+#aboutUS{
+    width:25%;
+}
+#aboutUS ul{
+    /* About US */
+
+
+
+list-style: none;
+
+}
+#aboutUS ul li{
+    padding: 5%;
+}
+#aboutUS a{
+    text-decoration: none;
+
+    /* Career */
+
+
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+
+
+color: #FFFFFF;
+
+
+}
+
+#aboutUS-head{
+    /* SmartCloud */
+
+
+width: 280px;
+height: 24px;
+left: 735px;
+top: 1588px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+color: #8B8A8A;
+
+
+
+}
+#chatus{
+    /* Rectangle 3 */
+
+
+width: 20%;
+
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.205em;
+text-transform: capitalize;
+
+color: #000000;
+
+
+}
+#btn-chatus{
+    
+
+
+width: 160px;
+height: 49px;
+left: 980px;
+top: 1582px;
+background: linear-gradient(180deg, rgba(216, 132, 7, 0.9) 0%, #FF9900 113.54%);
+border-radius: 5px;
+}
+#phone-nav{
+    width: 100%;
+    background-color: white !important;
+}
+.navbar-toggler{
+    background: orange !important;
+}
+.head-svg-phone-nav{
+    width: 100%;
+
+}
+.modal{
+    width:100% !important;
+}
+.modal-dialog{
+    margin-top: 5% !important;
+}
+.modal-content{
+    width:100% ;
+    display: flex;
+    flex-direction: column;
+   gap:5%;
+}
+.modal-body{
+    width:100% !important;
+    display: flex;
+    flex-direction: column;
+    
+    
+   
+}
+.lbl-input label{
+    width:100%;
+    font-family: var(--btnFont);
+}
+#email input, #signupfn input, #signupphone input,#cpassword input{
+    width:100%;
+}
+#password input{
+    width: 100%;
+}
+#btnloginform, #btnsignupform {
+    padding-top: 5%;
+}
+#btnloginform button, #btnsignupform  button{
+    width:100%;
+    
+}
+.btn-primary{
+    background: var(--btnBackground) !important;
+    font-family: var(--btnFont) !important;
+}
+#lblpw-inputpw, #lblemail-inputemail, #lblphone-inputphone, #lblcpw-inputcpw {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+#seemore{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#seemore button{
+    
+    background: var(--btnBackground) ;
+    font-family: var(--btnFont);
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border: 2px solid #dcdcdc;
+	background: orange;
+	box-shadow: 7px 7px 23px #bebebe, -7px -7px 23px #ffffff;
+	overflow: hidden;
+	border-radius: 60px;
+}
+#darklightmode{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    position: fixed;
+    z-index: 999;
+    right:0;
+    bottom: 2%;
+}
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+input:checked + .slider:before {
+	background: orange;
+	box-shadow: none;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+.slider {
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 11px;
+	font-family: sans-serif;
+}
+
+.slider--0 {
+	color: white;
+	font-weight: 600;
+	background-color: black;
+}
+
+.slider--1 div {
+	transition: 0.5s;
+}
+
+.slider--1 div {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	left: 0;
+}
+
+input:checked ~ .slider--1 div:first-child {
+	transform: translateY(-100%);
+	transition-delay: 1s;
+}
+
+input:checked ~ .slider--1 div:last-child {
+	transform: translateY(100%);
+	transition-delay: 1s;
+}
+
+input:checked ~ .slider--2 {
+	transform: translateX(100%);
+	transition-delay: 0.5s;
+}
+
+input:checked ~ .slider--3 {
+	transform: translateX(-100%);
+	transition-delay: 0s;
+}
+
+.slider--1 div:first-child {
+	transform: translateY(0);
+	top: 0;
+	background-color:orange;
+	transition-delay: 0s;
+}
+
+.slider--1 div:last-child {
+	transform: translateY(0);
+	bottom: 0;
+	background-color: orange;
+	border-top: 1px solid #e0e0e0;
+	transition-delay: 0s;
+}
+
+.slider--2 {
+	background-color: orange;
+	transition-delay: 0.5s;
+	transform: translateX(0);
+	border-left: 1px solid #d2d2d2;
+}
+
+.slider--3 {
+	background-color: orange;
+	transition-delay: 1s;
+	transform: translatex(0);
+	border-right: 1px solid #d2d2d2;
+}
+.darkmode{
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width:950px) {
+
+    #desktop {
+      display: none;
+     
+
+    }
+   body{
+   display: flex;
+    width:100%;
+    margin: 0 !important;
+    padding: 0;
+   
+   }
+   
+    #phone-nav{
+        display:block;
+        width:100%;
+        position:relative !important;
+        
+    }
+    
+    
+    main{
+        flex-wrap: wrap;
+       
+       
+    }
+    .middle-top{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+        
+    }
+    #intro-p-header{
+            font-weight: 800;
+            font-size: 1.5em;
+            line-height: 1.5em;
+            align-items: center;
+            letter-spacing: 0.205em;
+    }
+    #intro-p{
+        width:100%;
+        height: auto;
+        display: flex ;
+        align-items: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #213BB0;
+        font-family: 'Barlow';
+        font-style: normal;
+    }
+    #middle-top-img {
+        width:100%;
+    }
+    #middle-top-img img{
+        width:100%;
+    }
+    .middle-last{
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+        
+       
+        }
+   
+   
+    
+    .card{
+        
+        align-items: center !important;
+        width:20rem !important;
+        
+    }
+    .card img{
+
+        width:12rem !important;
+        
+
+    }
+    .card-body{
+        font-size: medium !important;
+    }
+    footer{
+        width:100%;
+    }
+   .footer-items{
+        display: flex;
+        width:100%;
+    
+    
+   }
+   #socialmedia{
+         width:50%;
+         justify-content: center;
+   }
+    .sub-footer{
+        display: flex;
+        flex-direction: column;
+        width:50%;
+        align-items: center;
+        overflow: clip;
+        
+    }
+    
+    #chatus {
+
+        width:100%;
+        display: flex;
+        justify-content:center;
+
+
+    }
+    #chatus button{
+        width: 100%;
+    }
+}
+    
