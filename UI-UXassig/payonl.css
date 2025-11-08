@@ -69,6 +69,11 @@ body{
 table, th,td {
    border: 1px solid black;
    text-align: center;
+   color:var(--BoldBackgroundColor);
+}
+.tabledata td , th {
+  color:var(--BoldBackgroundColor) !important;
+  
 }
 .btncont button{
     /* From Uiverse.io by adamgiebl */ 
