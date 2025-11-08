@@ -1,4 +1,5 @@
 :root{
+
   --BoldBackgroundColor:#B95E82 ;
   --LightBackgroundColor:#FFECC0;
 
@@ -69,7 +70,7 @@ table, th,td {
    border: 1px solid black;
    text-align: center;
 }
-#btncont button{
+.btncont button{
     /* From Uiverse.io by adamgiebl */ 
 
   background: #B95E82;
@@ -92,7 +93,7 @@ table, th,td {
   cursor: pointer;
 }
 
-#btncont button .icon {
+.btncont button .icon {
   background: #FFECC0;
   margin-left: 1em;
   position: absolute;
@@ -107,23 +108,29 @@ table, th,td {
   transition: all 0.3s;
 }
 
-#btncont button:hover .icon {
+.btncont button:hover .icon {
   width: calc(100% - 0.6em);
 }
 
-#btncont button .icon svg {
+.btncont button .icon svg {
   width: 1.1em;
   transition: transform 0.3s;
   color: #B95E82;
 }
 
-#btncont button:hover .icon svg {
+.btncont button:hover .icon svg {
   transform: translateX(0.1em);
 }
 
-#btncont button:active .icon {
+.btncont button:active .icon {
   transform: scale(0.95);
 }
+.btnNext {
+  display: flex;
+  width:100%;
+  justify-content: end;
+}
+
 
 #btn-tabs {
   width:100%;
@@ -145,6 +152,11 @@ table, th,td {
   font-weight: 700 !important;
 }
 
+/* forms field  edit */
+form input {
+  width:100% !important;
+  margin-bottom: 5% !important;
+}
 
 /* tabs css  */
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
