@@ -82,14 +82,92 @@
                         </tbody>
                 </table>
             </div>
-         <div id="btn-tabs"> 
-           <div class="nav nav-pills nav-fill">
-                <button class="nav-link active btn" aria-current="page" >Personal Info </button>                
-                <button class="nav-link btn">Address Info </button>
-                <button class="nav-link btn " >Card Info </button>
+            <div id="btn-tabs"> 
+                <div class="nav nav-pills nav-fill">
+                    <div class="warpper">
+                            <input class="radio" id="one" name="group" type="radio" checked>
+                            <input class="radio" id="two" name="group" type="radio">
+                            <input class="radio" id="three" name="group" type="radio">
+                            <div class="tabs">
+                                <label class="tab" id="one-tab" for="one">Personal Info</label>
+                                <label class="tab" id="two-tab" for="two">Adress</label>
+                                <label class="tab" id="three-tab" for="three">payment way</label>
+                            </div>
+                            <div class="panels">
+                                <div class="panel" id="one-panel">
+                                    <div class="panel-title">
+                                                        
+                                    <form action="#" method="post">
+                                        <input type="text" placeholder="Please enter Full Name" id="fullname" required>
+                                        <input type="email" placeholder="please enter your email" id="email" required>
+                                        <input type="number" placeholder="Please enter your phone number" id="phonenumber" required>
+                                        
+                                    </form>
+
+
+                                    </div>
+                                 
+                                </div>
+                                <div class="panel" id="two-panel">
+                                    <div class="panel-title">
+                                            <form action="#" method="post"> 
+                                                <input type="text" placeholder="enter city name" id="city" required>
+                                                <input type="text" placeholder="street name" id="streetname" required>
+                                                <input type="number" placeholder="building number"id="buildingnumber" required>
+                                                <input type="number" placeholder="Floor number" id="floornumber" required>
+                                            
+                                            </form>
+                                    </div>
+                                   
+                                <div class="panel" id="three-panel">
+                                    <div class="panel-title">
+                                        <div class="mainscreen">
+        
+                                            <div class="card">
+                                                <div class="leftside">
+                                                    <img  src="https://i.pinimg.com/originals/18/9d/dc/189ddc1221d9c1c779dda4ad37a35fa1.png" class="product"  alt="Shoes" />
+                                                </div>
+                                                <div class="rightside">
+                                                    <form action="">
+                                                                    <h1>CheckOut</h1>
+                                                                    <h2>Payment Information</h2>
+                                                                    <p>Cardholder Name</p>
+                                                                    <input type="text" class="inputbox" name="name" required />
+                                                                    <p>Card Number</p>
+                                                                    <input type="number" class="inputbox" name="card_number" id="card_number" required />
+
+                                                                    <p>Card Type</p>
+                                                                    <select class="inputbox" name="card_type" id="card_type" required>
+                                                                        <option value="">--Select a Card Type--</option>
+                                                                        <option value="Visa">Visa</option>
+                                                                        <option value="RuPay">RuPay</option>
+                                                                        <option value="MasterCard">MasterCard</option>
+                                                                    </select>
+                                                                    <div class="expcvv">
+
+                                                                        <p class="expcvv_text">Expiry</p>
+                                                                        <input type="date" class="inputbox" name="exp_date" id="exp_date" required />
+
+                                                                        <p class="expcvv_text2">CVV</p>
+                                                                        <input type="password" class="inputbox" name="cvv" id="cvv" required />
+                                                                    </div>
+                                                                    <p></p>
+                                                                    <button type="submit" class="button">CheckOut</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                        </div>
+  
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                    </div>
+
                 
-           </div>
-         </div>
+                </div>
+            </div>
         </div>
     </main>
     <script src="C:\Users\TD\OneDrive\Desktop\Unrwa-FrontEndCourse\Frontend-Unrwa-Digital-Hub\UI-UXassig\payonl.js"></script>
