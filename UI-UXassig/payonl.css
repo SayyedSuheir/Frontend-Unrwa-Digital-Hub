@@ -165,7 +165,9 @@ table, th,td {
 }
 
 /* forms field  edit */
-
+.panels {
+  background-color: var(--LightBackgroundColor) !important;
+}
 form input {
   width:100% !important;
   margin-bottom: 5% !important;
