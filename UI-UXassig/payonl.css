@@ -271,16 +271,16 @@ body {
 
 .mainscreen
 {
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	width: 100%;
 	display: flex;
     flex-direction: column;
-    background-color: #DFDBE5;
-    background-image: url("https://wallpaperaccess.com/full/3063067.png");
-    color:#963E7B;
+    /* background-color: #DFDBE5; */
+    /* background-image: url("https://wallpaperaccess.com/full/3063067.png"); */
+    /* color:#963E7B; */
 }
 
-.card {
+/* .card {
 	width: 60rem;
     margin: auto;
     background: white;
@@ -292,17 +292,9 @@ body {
     display:flex;
     flex-direction: row;
     
-}
+} */
 
-.leftside {
-	background: #030303;
-	width: 25rem;
-	display: inline-flex;
-    align-items: center;
-    justify-content: center;
-	border-top-left-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;
-}
+
 
 .product {
     object-fit: cover;
@@ -316,7 +308,7 @@ body {
 	width: 35rem;
 	border-bottom-right-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
-    padding: 1rem 2rem 3rem 3rem;
+    /* padding: 1rem 2rem 3rem 3rem; */
 }
 
 p{
@@ -356,14 +348,13 @@ p{
 }
 
 .button{
-    background: linear-gradient(
-135deg
-, #753370 0%, #298096 100%);
-    padding: 15px;
+background: #B95E82;
+background: linear-gradient(90deg, rgba(185, 94, 130, 1) 0%, rgba(185, 94, 130, 1) 50%, rgba(243, 159, 159, 1) 100%);
+padding: 15px;
     border: none;
     border-radius: 50px;
-    color: white;
-    font-weight: 400;
+    color: var(--LightBackgroundColor);
+    font-weight: 700;
     font-size: 1.2rem;
     margin-top: 10px;
     width:100%;
