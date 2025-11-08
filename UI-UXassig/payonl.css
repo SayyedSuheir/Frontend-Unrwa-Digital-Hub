@@ -12,6 +12,7 @@ body{
     width:100%;
     display: flex;
     flex-direction: column;
+    background-color: var(--LightBackgroundColor) !important;
     
 }
 
@@ -33,6 +34,7 @@ body{
     display: flex;
     justify-content: end;
     gap:2%;
+    color: var(--BoldBackgroundColor);
 }
 #profile{
     width:80%;
@@ -43,6 +45,7 @@ body{
 #profile svg{
     width:24px !important;
     height:24px !important;
+    
     
 }
 #cart{
@@ -69,12 +72,16 @@ body{
 table, th,td {
    border: 1px solid black;
    text-align: center;
-   color:var(--BoldBackgroundColor);
+ 
 }
 .tabledata td , th {
+
   color:var(--BoldBackgroundColor) !important;
-  
+  background-color: #FFECC0 !important;
+ 
+
 }
+
 .btncont button{
     /* From Uiverse.io by adamgiebl */ 
 
