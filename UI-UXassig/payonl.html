@@ -98,9 +98,12 @@
                                     <div class="panel-title">
                                                         
                                     <form action="#" method="post">
-                                        <input type="text" placeholder="Please enter Full Name" id="fullname" required>
-                                        <input type="email" placeholder="please enter your email" id="email" required>
-                                        <input type="number" placeholder="Please enter your phone number" id="phonenumber" required>
+                                        <label for="fullname">Full Name</label>
+                                        <input type="text" placeholder=" Full Name" id="fullname" required>
+                                        <label for="email">Email Address</label>
+                                        <input type="email" placeholder=" Email" id="email" required>
+                                        <label for="phonenumber">Phone Number</label>
+                                        <input type="number" placeholder="Phone Number" id="phonenumber" required>
                                         
                                     </form>
                                         <div class="btncont btnNext" >
@@ -129,13 +132,25 @@
                                 <div class="panel" id="two-panel">
                                     <div class="panel-title">
                                             <form action="#" method="post"> 
-                                                <input type="text" placeholder="enter city name" id="city" required>
-                                                <input type="text" placeholder="street name" id="streetname" required>
-                                                <input type="number" placeholder="building number"id="buildingnumber" required>
-                                                <input type="number" placeholder="Floor number" id="floornumber" required>
-                                            
+                                                <label for="city">City Name</label>
+                                                <input type="text" placeholder="City Name" id="city" required>
+                                                <label for="streetname">Street Name</label>
+                                                <input type="text" placeholder="Street Name" id="streetname" required>
+                                                <div class="addresnumbers">
+                                                    <div id="buildingnumber">
+                                                        
+                                                        <label for="buildingnumber">Building Number </label>
+                                                        <input type="number" placeholder="Building Number"id="buildingnumber" required>
+                                                    </div>
+                                                    <div id="floornumber">
+
+                                                        <label for="floornumber">Floor Number </label>
+                                                        <input type="number" placeholder="Floor number" id="floornumber" required>
+                                                
+                                                    </div>
+                                                </div> 
                                             </form>
-                                             <div class="btncont btnNext" >
+                                            <div class="btncont btnNext" >
                                                         <button type="button" >
                                                         NEXT
                                                             <div class="icon">
@@ -153,7 +168,7 @@
                                                                 </svg>
                                                             </div>
                                                         </button>
-                                             </div>
+                                            </div>
                                     </div>
                                    
                         
