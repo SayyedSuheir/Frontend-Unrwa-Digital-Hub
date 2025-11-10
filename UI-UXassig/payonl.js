@@ -55,7 +55,15 @@ paymentSelect.addEventListener("change", () => {
     document.getElementById("card_type").required = false;
     document.getElementById("exp_date").required = false;
     document.getElementById("cvv").required = false;
+    let total = document.getElementById('total');
+    total.innerHTML=`
+        <p> Total : ${120*3}$ </p>
     
+    `;
+    total.style.color="#B95E82";
+    total.style.fontWeight = "700";
+    const formContainer = document.querySelector("#three-panel .mainscreen > div"); // adjust selector to your layout
+    formContainer.appendChild(total);
   } else {
     // Show card-related fields for online payment
     cardFields.forEach(el => el.style.display = "");
@@ -63,5 +71,13 @@ paymentSelect.addEventListener("change", () => {
     document.getElementById("card_type").required = true;
     document.getElementById("exp_date").required = true;
     document.getElementById("cvv").required = true;
+
+    
+
+
   }
+
 });
+
+
+
