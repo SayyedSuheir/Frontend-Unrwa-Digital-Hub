@@ -25,9 +25,12 @@ body{
 }
 #logo{
     width:30%;
+   
 }
-#logo img{
-    width:50%;
+#logo svg{
+    width:30%;
+    height:auto !important;
+     
 }
 #icons{
     width:70%;
@@ -321,8 +324,8 @@ p{
 .inputbox
 {
     color:#030303;
-	width: 100%;
-    padding: 0.5rem;
+     width: 100%;
+     padding: 0.5rem;
     border: none;
     border-bottom: 1.5px solid #ccc;
     margin-bottom: 1rem;
@@ -389,4 +392,25 @@ padding: 15px;
         padding:0.5rem 3rem 3rem 2rem;
       border-radius:0;
     }
+}
+/* new checkout form */
+.payway {
+  
+  color:var(--BoldBackgroundColor);
+ 
+
+}
+.payradio, .paycash{
+ 
+  display: flex;
+  
+
+}
+.expcvv{
+  display: flex;
+  flex-direction: column;
+}
+.inputbox{
+  color:var(--LightBackgroundColor);
+   background-color: var(--BoldBackgroundColor);
 }
