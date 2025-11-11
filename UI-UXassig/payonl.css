@@ -414,3 +414,9 @@ padding: 15px;
   color:var(--LightBackgroundColor);
    background-color: var(--BoldBackgroundColor);
 }
+/* tab disabled class */
+.disabled-tab {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}

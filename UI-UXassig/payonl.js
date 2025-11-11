@@ -17,12 +17,16 @@ document.getElementById("next-one").addEventListener("click", () => {
   const fn = document.getElementById("fn").value.trim();
   const email = document.getElementById("txtemail").value.trim();
   const phone = document.getElementById("phone").value.trim();
-
+  const address = document.getElementById('two-tab'); 
+  
   if (!fn || !email || !phone) {
+        
+    
     alert("Please fill all fields before continuing.");
+
     return;
   }
-
+  address.classList.remove('disabled-tab'); 
   goToTab("two");
 });
 
@@ -32,12 +36,13 @@ document.getElementById("next-two").addEventListener("click", () => {
   const street = document.getElementById("streetnameinput").value.trim();
   const building = document.getElementById("buildingnumberinput").value.trim();
   const floor = document.getElementById("floornumberinput").value.trim();
+  const payinfo = document.getElementById('three-tab'); 
 
   if (!city || !street || !building || !floor) {
     alert("Please fill address details before continuing.");
     return;
   }
-
+  payinfo.classList.remove('disabled-tab'); 
   goToTab("three");
 });
 
