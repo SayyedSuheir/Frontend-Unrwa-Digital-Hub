@@ -429,7 +429,7 @@ padding: 15px;
   width:25%;
 }
 
-@media screen and (max-width:1900px) {
+@media screen and (max-width:3000px) {
 
 header {
   width:100%;
@@ -438,6 +438,7 @@ header {
 main{
   display: flex;
   justify-content: center;
+  width:100%;
 }
 
 #logo svg {
@@ -445,7 +446,24 @@ main{
    width:30px;
 }
 
+#tabs{
+  width:100% ;
+  display: flex;
+  justify-content: center;
 
+}
 
+#invoicetable{
+  width:80%;
+}
+
+#btn-tabs{
+  width:100%;
+  
+  justify-content: center;
+}
+.warpper{
+  width: 100%;
+}
   
 }
