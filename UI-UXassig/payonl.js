@@ -84,21 +84,29 @@ paymentSelect.addEventListener("change", () => {
 
 });
 
-    document.querySelectorAll('.masked').forEach(input => {
-    input.addEventListener('input', e => {
-      let value = e.target.value.replace(/\D/g, '*'); // Only keep digits
-      e.target.dataset.realValue = value; // Store the real digits
-      e.target.value = '*'.repeat(value.length); // Mask them with *
-    });
+const masked = document.querySelectorAll('.masked');
 
-    // Optional: allow backspace editing
-    input.addEventListener('keydown', e => {
-      if (e.key === 'Backspace') {
-        let value = (e.target.dataset.realValue || '').slice(0, -1);
-        e.target.dataset.realValue = value;
-        e.target.value = '*'.repeat(value.length);
-        e.preventDefault();
-      }
-    });
+masked.forEach(input => {
+  input.addEventListener('input', e => {
+    let realValue = e.target.dataset.realValue || '';
+    const newChar = e.data;
+
+    // Handle backspace
+    if (e.inputType === 'deleteContentBackward') {
+      realValue = realValue.slice(0, -1);
+    } 
+    // Handle normal input (numbers only)
+    else if (newChar && /\d/.test(newChar)) {
+      realValue += newChar;
+    } 
+    // Handle paste
+    else if (!newChar && e.inputType === 'insertFromPaste') {
+      const pasted = e.target.value.replace(/\D/g, '');
+      realValue += pasted;
+    }
+
+    e.target.dataset.realValue = realValue;
+    e.target.value = '*'.repeat(realValue.length);
   });
+});
 
