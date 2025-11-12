@@ -56,7 +56,7 @@ paymentSelect.addEventListener("change", () => {
     // Hide card-related fields
     cardFields.forEach(el => el.style.display = "none");
     // Optional: make inputs not required
-    document.getElementById("card_number").required = false;
+    document.getElementById("cardnumber").style.display = "none";
     document.getElementById("card_type").required = false;
     document.getElementById("exp_date").required = false;
     document.getElementById("cvv").required = false;
@@ -72,7 +72,7 @@ paymentSelect.addEventListener("change", () => {
   } else {
     // Show card-related fields for online payment
     cardFields.forEach(el => el.style.display = "");
-    document.getElementById("card_number").required = true;
+    document.getElementById("cardnumber").style.display ="";
     document.getElementById("card_type").required = true;
     document.getElementById("exp_date").required = true;
     document.getElementById("cvv").required = true;
@@ -84,5 +84,21 @@ paymentSelect.addEventListener("change", () => {
 
 });
 
+    document.querySelectorAll('.masked').forEach(input => {
+    input.addEventListener('input', e => {
+      let value = e.target.value.replace(/\D/g, '*'); // Only keep digits
+      e.target.dataset.realValue = value; // Store the real digits
+      e.target.value = '*'.repeat(value.length); // Mask them with *
+    });
 
+    // Optional: allow backspace editing
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Backspace') {
+        let value = (e.target.dataset.realValue || '').slice(0, -1);
+        e.target.dataset.realValue = value;
+        e.target.value = '*'.repeat(value.length);
+        e.preventDefault();
+      }
+    });
+  });
 

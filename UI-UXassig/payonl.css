@@ -420,3 +420,32 @@ padding: 15px;
   opacity: 0.5;
   cursor: not-allowed;
 }
+/* cardnumber */
+#cardnumber{
+  display: flex;
+  width:100%;
+}
+#cardnumber input{
+  width:25%;
+}
+
+@media screen and (max-width:1900px) {
+
+header {
+  width:100%;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+}
+
+#logo svg {
+   height:auto !important;
+   width:30px;
+}
+
+
+
+  
+}
